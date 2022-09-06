@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/landlord_nav_graph"
+    app:startDestination="@id/tenantDashboardFragment">
+
+    <include app:graph="@navigation/nav_graph" />
+    <fragment
+        android:id="@+id/tenantDashboardFragment"
+        android:name="com.example.house_rental.tenant.landing.ui.dashboard.TenantDashboardFragment"
+        android:label="fragment_tenant_dashboard"
+        tools:layout="@layout/fragment_tenant_dashboard">
+        <deepLink
+            android:id="@+id/deepLink"
+            app:uri="http://housetolet.io/wallet/" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewHousesFragment"
+        android:name="com.example.house_rental.tenant.landing.ui.viewhouses.ViewHousesFragment"
+        android:label="fragment_view_houses"
+        tools:layout="@layout/fragment_view_houses" >
+        <action
+            android:id="@+id/action_viewHousesFragment_to_viewHouseFragment"
+            app:destination="@id/viewHouseFragment" />
+        <action
+            android:id="@+id/action_viewHousesFragment_to_houseRequestFragment"
+            app:destination="@id/houseRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewHouseFragment"
+        android:name="com.example.house_rental.tenant.landing.ui.viewhouse.ViewHouseFragment"
+        android:label="fragment_view_house"
+        tools:layout="@layout/fragment_view_house" >
+        <argument
+            android:name="house_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_viewHouseFragment_to_houseRequestFragment"
+            app:destination="@id/houseRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/houseRequestFragment"
+        android:name="com.example.house_rental.tenant.landing.ui.house_request.HouseRequestFragment"
+        android:label="fragment_house_request"
+        tools:layout="@layout/fragment_house_request" >
+        <argument
+            android:name="house_id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.house_rental.tenant.landing.ui.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

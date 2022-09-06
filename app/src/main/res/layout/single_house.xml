@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/house_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        tools:ignore="MissingConstraints"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/house_image"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1"
+            android:src="@drawable/welcome"
+            />
+        <TextView
+            android:id="@+id/house_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2 bed room flat"
+            android:textColor="@color/textPrimaryColor"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_medium"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Price: (&#8358;) "
+                android:fontFamily="@font/manrope_regular"/>
+            <TextView
+                android:id="@+id/house_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="90,000 / per annum"
+                android:textColor="@color/textPrimaryColor"
+                android:textSize="12sp"
+                android:fontFamily="@font/manrope_medium"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Address: "
+                android:fontFamily="@font/manrope_regular"/>
+            <TextView
+                android:id="@+id/house_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sun city estate galadimawa abuja"
+                android:textColor="@color/textPrimaryColor"
+                android:textSize="12sp"
+                android:fontFamily="@font/manrope_medium"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_request_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/border"
+                android:backgroundTint="@color/themePrimaryColor"
+                android:clickable="true"
+                android:text="Send Request"
+                android:textAllCaps="true"
+                android:textColor="@color/textSecondaryColor" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

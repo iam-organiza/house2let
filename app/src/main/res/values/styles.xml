@@ -1,0 +1,17 @@
+<resources>
+
+    <style name="Widget.Theme.House_rental.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+    <style name="navigation_view_item_text">
+        <item name="android:fontFamily">@font/manrope_regular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/textPrimaryColor</item>
+    </style>
+
+    <style name="TopUpAlertDialog">
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+    </style>
+
+</resources>
